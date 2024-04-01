@@ -6,6 +6,7 @@ import frc.robot.subsystems.ArmSubsystem
 class MoveArmToAmpCommand(armSubsystem: ArmSubsystem) : Command() {
     private val armSubsystem: ArmSubsystem
     private var numTimesAtPos = 0
+    private var angle = 195.0
 
     init {
         // each subsystem used by the command must be passed into the addRequirements() method
@@ -23,9 +24,9 @@ class MoveArmToAmpCommand(armSubsystem: ArmSubsystem) : Command() {
      * (That is, it is called repeatedly until [isFinished] returns true.)
      */
     override fun execute() {
-        armSubsystem.moveArmToAngle(208.067)
+        armSubsystem.moveArmToAngle(angle)
 
-        if (armSubsystem.angle < 208.067 + 0.5 && armSubsystem.angle > 208.067 - 0.5) {
+        if (armSubsystem.angle < angle + 0.5 && armSubsystem.angle > angle - 0.5) {
             numTimesAtPos++
         } else {
             numTimesAtPos = 0

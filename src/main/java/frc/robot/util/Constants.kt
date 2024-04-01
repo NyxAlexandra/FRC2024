@@ -14,7 +14,7 @@ object Constants {
     /**
      *
      */
-    const val ROBOT_MASS: Double = 39.97 // 32lbs * kg per pound
+    const val ROBOT_MASS: Double = 57.97 // 32lbs * kg per pound
     /**
      *
      */
@@ -197,11 +197,11 @@ object Constants {
         /**
          *
          */
-        val TRANSLATION_PID: PIDConstants = PIDConstants(0.7, 0.0, 0.0)
+        val TRANSLATION_PID: PIDConstants = PIDConstants(50.0, 0.0, 5.0)
         /**
          *
          */
-        val ANGLE_PID: PIDConstants = PIDConstants(0.04, 0.0, 0.075)
+        val ANGLE_PID: PIDConstants = PIDConstants(50.0, 0.0, 0.0)
     }
 
     /**
